@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Get API for Vehicle Registration{% endblock %}
+
+{% block body %}
+<div class="container">
+  <div class="d-flex justify-content-center p-2 bd-highlight">
+    <div class="row col-sm-12 col-md-8">
+        <div class="card-body">
+          <div class="card-header">
+            <div class="text-center">Add Client Details</div>
+          </div>         
+          {{ form_start(form) }}
+          <div class="form-group">
+            <div class="col-md-12 mb-3">
+              {{ form_row(form.age, {'attr': {'class': 'form-control'}}) }}
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-md-12 mb-3">
+              {{ form_row(form.postcode, {'attr': {'class': 'form-control'}}) }}
+            </div>
+          </div>                 
+          <div class="form-group">
+            <div class="col-md-12 mb-3">
+              {{ form_row(form.vehicleregistration, {'attr': {'class': 'form-control'}}) }}
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-md-12 col-md-offset-4" style="margin-top:5px;">
+              <button type="mit" class="col-12 btn-primary d-grid gap-2">
+              <i class="fa fa-btn fa-user"></i> Check ABI Code
+              </button>
+            </div>
+          </div>
+          {{ form_end(form) }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
